@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef, ChangeEvent, KeyboardEvent } from 'react';
-import adivinanzasJSON from '../public/advininanzas.json'
+import confetti from 'canvas-confetti';
+import adivinanzasJSON from '../public/advininanzas.json';
 
 type Adivinanza = {
   adivinanza: string;
@@ -35,6 +36,39 @@ const Home = () => {
     chooseRandomAnswer();
   }, [])
 
+  const handleValidAnswer = () => {
+    shootConfetti();
+  }
+
+  const randomInRange = (min: number, max: number) => {
+    return Math.random() * (max - min) + min;
+  }
+
+  const shootConfetti = () => {
+    const duration = 15 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+
+    const interval = setInterval(function() {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+      // since particles fall down, start a bit higher than random
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+      confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+    }, 250);
+  }
+
   const chooseRandomAnswer = () => {
     const index = Math.random() * (adivinanzasJSON.length);
     let adivinanza = adivinanzasJSON?.at(index) || defaultAdivinanza;
@@ -45,10 +79,6 @@ const Home = () => {
       letras: adivinanza?.animal?.replaceAll(' ', '')?.length
     }
     setAdivinanza(adivinanza);
-  }
-
-  const handleValidAnswer = () => {
-    
   }
 
   return (
@@ -81,7 +111,7 @@ const Home = () => {
             Altura<br/>{ adivinanza.peso }m
           </p>
         </div>
-        <Inputs handleValidAnswer={handleValidAnswer} adivinanza={adivinanza}></Inputs>
+        <Inputs adivinanza={adivinanza} handleValidAnswer={handleValidAnswer}></Inputs>
         <p className="font-medium text-center mt-6 text-l">
         ({ adivinanza.palabras } palabra{ adivinanza.palabras > 1 ? 's' : '' }) ({ adivinanza.letras } letras)
         </p>
@@ -91,16 +121,17 @@ const Home = () => {
 }
 
 type InputsProps = {
-  handleValidAnswer: () => void;
   adivinanza: Adivinanza;
+  handleValidAnswer: () => void;
 };
 
-const Inputs = ({ handleValidAnswer, adivinanza }: InputsProps) => {
+const Inputs = ({ adivinanza, handleValidAnswer }: InputsProps) => {
   
   const [ userAnswerArr, setUserAnswerArr ] = useState<string[]>([]);
 
   const [ currentInputIndex, setCurrentInputIndex ] = useState<number>(0);
 
+  const [ validAnswer, setValidAnswer ] = useState<boolean>(false);
   const [ invalidAnswer, setInvalidAnswer ] = useState<boolean>(false);
 
   const moveFocusBack = (inputIndex: number) => {
@@ -120,6 +151,7 @@ const Inputs = ({ handleValidAnswer, adivinanza }: InputsProps) => {
     const fullAnswer = userAnswerArr.join('');
     if (fullAnswer.length === adivinanza.respuesta.length) {
       if (fullAnswer === adivinanza.respuesta) {
+        setValidAnswer(true);
         handleValidAnswer();
       } else {
         setInvalidAnswerAndReset();
@@ -150,6 +182,7 @@ const Inputs = ({ handleValidAnswer, adivinanza }: InputsProps) => {
               value={userAnswerArr.at(i) || ''}
               focused={i === currentInputIndex}
               invalidAnswer={invalidAnswer}
+              validAnswer={validAnswer}
             >
             </Input>
         ))
@@ -165,9 +198,10 @@ type InputProps = {
   moveFocusBack: (inputIndex: number) => void;
   focused: boolean;
   invalidAnswer: boolean;
+  validAnswer: boolean;
 };
 
-const Input = ({ inputIndex, value, changeHandler, moveFocusBack, focused, invalidAnswer }: InputProps) => {
+const Input = ({ inputIndex, value, changeHandler, moveFocusBack, focused, invalidAnswer, validAnswer }: InputProps) => {
 
   const [ text, setText ] = useState('');
 
@@ -208,7 +242,7 @@ const Input = ({ inputIndex, value, changeHandler, moveFocusBack, focused, inval
       className="outline-0"
       ref={ref}
       value={text}
-      style={{ width: '14px', textAlign: 'center', color: invalidAnswer ? 'red' : '#000' }}
+      style={{ width: '14px', textAlign: 'center', color: validAnswer ? 'green' : invalidAnswer ? 'red' : '#000' }}
       max-length="1"
       placeholder="_"
       disabled={invalidAnswer}
