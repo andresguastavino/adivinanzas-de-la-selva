@@ -48,6 +48,146 @@
       "animal": "Conejo",
       "dificultad": 1,
       "imagen": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Conejo.jpg"
-    }
-  ]
+    },
+    {
+        "adivinanza": "Vuela de noche sin ver, usa el eco para cazar, y si escuchas su ulular, pronto la podrás hallar.",
+        "pista": "Tiene orejas grandes y vive en cuevas o árboles.",
+        "velocidad": 20,
+        "peso": 0.02,
+        "altura": 0.05,
+        "animal": "Murciélago",
+        "dificultad": 3,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Murci%C3%A9lago_en_vuelo.jpg"
+    },
+    {
+        "adivinanza": "Pequeño, saltarín, maestro del camuflaje en su hábitat marino, y a veces parece estar de pie.",
+        "pista": "El macho lleva a sus crías en una bolsa.",
+        "velocidad": 0.002,
+        "peso": 0.2,
+        "altura": 0.3,
+        "animal": "Caballito de mar",
+        "dificultad": 3,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/6/63/Caballito_de_mar.jpg"
+    },
+    {
+        "adivinanza": "Canta al amanecer, vive en granjas y cuando el sol aparece, su canto siempre agradece.",
+        "pista": "Es conocido como el despertador natural.",
+        "velocidad": 15,
+        "peso": 3.5,
+        "altura": 0.5,
+        "animal": "Gallo",
+        "dificultad": 1,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Gallo.jpg"
+    },
+    {
+        "adivinanza": "Grande y gris, con colmillos y trompa, camina lento, pero su fuerza asombra.",
+        "pista": "Es el terrestre más pesado del mundo.",
+        "velocidad": 25,
+        "peso": 5000,
+        "altura": 3.3,
+        "animal": "Elefante",
+        "dificultad": 2,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/52/Elefante_africano.jpg"
+    },
+    {
+        "adivinanza": "Es el rey de la selva, su melena le adorna. Su rugido impone respeto y su territorio controla.",
+        "pista": "Se le asocia con el liderazgo y la valentía.",
+        "animal": "León",
+        "dificultad": 1,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg",
+        "velocidad": 80,
+        "peso": 190,
+        "altura": 1.2
+    },
+    {
+        "adivinanza": "Tiene rayas blancas y negras, y en la sabana africana suele correr cuando se inquieta.",
+        "pista": "Es un animal equino con un patrón único en su piel.",
+        "animal": "Cebra",
+        "dificultad": 2,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Plains_Zebra_Equus_quagga.jpg",
+        "velocidad": 65,
+        "peso": 350,
+        "altura": 1.5
+    },
+    {
+        "adivinanza": "Con su largo cuello, alcanza las hojas más altas. En la sabana africana, destaca entre los demás.",
+        "pista": "Es el animal terrestre más alto del mundo.",
+        "animal": "Jirafa",
+        "dificultad": 1,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Giraffe_standing.jpg",
+        "velocidad": 60,
+        "peso": 800,
+        "altura": 5.5
+    },
+    {
+        "adivinanza": "Es famoso por su trompa, su tamaño y sus colmillos. En la sabana y la selva, es un gigante tranquilo.",
+        "pista": "Es el animal terrestre más pesado.",
+        "animal": "Elefante",
+        "dificultad": 1,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg",
+        "velocidad": 40,
+        "peso": 6000,
+        "altura": 3.3
+    },
+    {
+        "adivinanza": "De noche sale a volar, buscando frutas y néctar. Cuélgate cabeza abajo, si quieres a este animal imitar.",
+        "pista": "Es un mamífero volador conocido como 'murciélago frugívoro'.",
+        "animal": "Murciélago",
+        "dificultad": 3,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Lesser_short-nosed_fruit_bat_%28Cynopterus_brachyotis%29.jpg",
+        "velocidad": 40,
+        "peso": 0.03,
+        "altura": 0.2
+    },
+    {
+        "adivinanza": "Vive en los polos, y aunque blanco parece, es un gran cazador que a las focas estremece.",
+        "pista": "Su pelaje es translúcido, pero parece blanco por la luz reflejada.",
+        "animal": "Oso polar",
+        "dificultad": 2,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Polar_Bear_-_Alaska_%28cropped%29.jpg",
+        "velocidad": 40,
+        "peso": 450,
+        "altura": 2.5
+    },
+    {
+        "adivinanza": "Con sus grandes orejas y su cola en espiral, es el mejor amigo del hombre, leal y sin igual.",
+        "pista": "Hay más de 340 razas diferentes en el mundo.",
+        "animal": "Perro",
+        "dificultad": 1,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_of_Nine_Dogs.jpg",
+        "velocidad": 50,
+        "peso": 25,
+        "altura": 0.5
+    },
+    {
+        "adivinanza": "Vuela sin cesar por el cielo azul, construye sus nidos en primavera con barro y pelusa.",
+        "pista": "Su vuelo rápido y su canto anuncian el buen tiempo.",
+        "animal": "Golondrina",
+        "dificultad": 2,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/59/Hirundo_rustica_-England_-flying-8.jpg",
+        "velocidad": 50,
+        "peso": 0.02,
+        "altura": 0.1
+    },
+    {
+        "adivinanza": "Siempre viste de blanco y negro, en el agua nada con destreza. Es un ave que no vuela, pero en el hielo reposa con firmeza.",
+        "pista": "Habita en el hemisferio sur y no tiene alas funcionales para volar.",
+        "animal": "Pingüino",
+        "dificultad": 2,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/47/Pygoscelis_papua2.jpg",
+        "velocidad": 10,
+        "peso": 35,
+        "altura": 1.2
+    },
+    {
+        "adivinanza": "Es el rey de los mares, con grandes dientes asusta. De este animal todos huyen si encuentran su ruta.",
+        "pista": "Es un pez cartilaginoso, no tiene huesos.",
+        "animal": "Tiburón",
+        "dificultad": 3,
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/7/7f/White_shark.jpg",
+        "velocidad": 56,
+        "peso": 1100,
+        "altura": 5
+    } 
+]
   
