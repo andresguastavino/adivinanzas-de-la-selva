@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef, ChangeEvent, KeyboardEvent } from 'react';
-import ConfettiExplosion from 'react-confetti-explosion';
 import adivinanzasJSON from '../public/advininanzas.json'
 
 type Adivinanza = {
@@ -32,8 +31,6 @@ const Home = () => {
 
   const [ adivinanza, setAdivinanza ] = useState<Adivinanza>(defaultAdivinanza);
 
-  const [ showExplosion, setShowExplosion ] = useState<boolean>(false);
-
   useEffect(() => {
     chooseRandomAnswer();
   }, [])
@@ -51,12 +48,11 @@ const Home = () => {
   }
 
   const handleValidAnswer = () => {
-    setShowExplosion(true);
+    
   }
 
   return (
     <div className="flex flex-wrap content-start min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      { showExplosion && <ConfettiExplosion /> }
       <header className="w-full h-size-min pt-20 pb-16">
         <h1 className="text-6xl font-semibold text-center">
           Adivinanzas de la selva
