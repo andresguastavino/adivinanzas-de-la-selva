@@ -108,7 +108,7 @@ const Home = () => {
             Velocidad<br/>{ adivinanza.velocidad }km/h
           </p>
           <p className="font-medium text-center mb-10 text-l mx-8">
-            Altura<br/>{ adivinanza.peso }m
+            Altura<br/>{ adivinanza.altura }m
           </p>
         </div>
         <Inputs adivinanza={adivinanza} handleValidAnswer={handleValidAnswer}></Inputs>
