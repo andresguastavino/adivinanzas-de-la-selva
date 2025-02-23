@@ -1,0 +1,53 @@
+[
+    {
+      "adivinanza": "Vuela en bandadas al atardecer, tiene plumas negras y un graznido que puedes reconocer.",
+      "pista": "Se asocia con la inteligencia y es un símbolo en muchas culturas.",
+      "velocidad": 48,
+      "peso": 0.7,
+      "altura": 0.3,
+      "animal": "Cuervo",
+      "dificultad": 3,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/0/03/Cuervo.jpg"
+    },
+    {
+      "adivinanza": "Con patas largas y finas, en el agua suele andar. Su plumaje es rosado y siempre está en par.",
+      "pista": "Su color proviene de lo que come.",
+      "velocidad": 60,
+      "peso": 3,
+      "altura": 1.2,
+      "animal": "Flamenco",
+      "dificultad": 2,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/34/Flamenco.jpg"
+    },
+    {
+      "adivinanza": "Vive en lo profundo, con luz propia puede brillar, su cabeza es grande y muchos dientes tiene para cazar.",
+      "pista": "Es un pez que vive en las zonas abisales del océano.",
+      "velocidad": 1,
+      "peso": 3,
+      "altura": 0.3,
+      "animal": "Pez linterna",
+      "dificultad": 3,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Pez_linterna.jpg"
+    },
+    {
+      "adivinanza": "Tiene un caparazón fuerte, camina despacio, y puede vivir más de 100 años.",
+      "pista": "Lleva su casa encima.",
+      "velocidad": 0.3,
+      "peso": 400,
+      "altura": 1.2,
+      "animal": "Tortuga gigante",
+      "dificultad": 2,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/45/Tortuga_gigante.jpg"
+    },
+    {
+      "adivinanza": "Pequeño roedor, tiene largas orejas, patas traseras fuertes y es conocido por su rapidez.",
+      "pista": "Se asocia con huevos de Pascua.",
+      "velocidad": 60,
+      "peso": 2.5,
+      "altura": 0.4,
+      "animal": "Conejo",
+      "dificultad": 1,
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Conejo.jpg"
+    }
+  ]
+  
